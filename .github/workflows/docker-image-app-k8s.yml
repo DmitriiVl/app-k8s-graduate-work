@@ -15,4 +15,4 @@ jobs:
     - name: Build the Docker image
 #      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
 #      run: docker build . -t milvo/app-k8s-graduate-work:$(date +%s)
-      run: ls -la
+      run: ls -ll
