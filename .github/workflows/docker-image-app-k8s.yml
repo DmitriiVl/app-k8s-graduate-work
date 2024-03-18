@@ -28,5 +28,5 @@ jobs:
         context: .
         file: ./Dockerfile
         push: true
-        tags: ${{ steps.meta.outputs.tags }}
+        tags: milvo/app-k8s-graduate-work
         labels: ${{ steps.meta.outputs.labels }}
