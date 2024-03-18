@@ -26,8 +26,8 @@ jobs:
       uses: docker/metadata-action@v5
       with:
         images: ${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.DOCKER_REPO_NAME }}
-#        tags: latest
-#        labels: latest
+##        tags: latest
+##        labels: latest
         tags: |
               # type=semver,pattern={{version}},value=v1.0.0
               # minimal
