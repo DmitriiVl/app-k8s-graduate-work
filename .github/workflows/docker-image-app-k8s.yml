@@ -47,7 +47,16 @@ jobs:
         context: .
         file: ./Dockerfile
         push: true
-#       tags: milvo/app-k8s-graduate-work
-#       tags: milvo/app-k8s-graduate-work
         tags: ${{ steps.meta.outputs.tags }}
         labels: ${{ steps.meta.outputs.labels }}
+
+    - name: create kubeconfig file
+      run: |
+        mkdir ${HOME}/.kube
+        echo ${{ secrets.KUBE_CONFIG}} | base64 --decode > ${HOME}/.kube/config
+        cat ${HOME}/.kube/config
+        
+    - name: Use context
+      run: kubectl config use-context kubernetes-admin@cluster.local
+    - name: Deploy APP to K8S
+      run: kubectl apply -f app-k8s-graduate-work.yml
