@@ -61,3 +61,4 @@ jobs:
 
     - name: Deploy APP to K8S
       run: kubectl apply -f app-k8s-graduate-work.yml
+      
