@@ -58,5 +58,6 @@ jobs:
         
     - name: Use context
       run: kubectl config use-context kubernetes-admin@cluster.local
+      
     - name: Deploy APP to K8S
       run: kubectl apply -f app-k8s-graduate-work.yml
