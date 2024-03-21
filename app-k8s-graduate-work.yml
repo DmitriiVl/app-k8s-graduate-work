@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: nginx-app-k8s-graduate-work
-        image: milvo/app-k8s-graduate-work:0.1
+        image: milvo/app-k8s-graduate-work:latest
         resources:
           limits:
             memory: "128Mi"
